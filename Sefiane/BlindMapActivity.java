@@ -1,10 +1,6 @@
-package com.example.androidproject;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.fragment.app.FragmentActivity;
 
 import android.Manifest;
 import android.content.BroadcastReceiver;
@@ -13,7 +9,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.location.Location;
-import android.location.LocationListener;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -22,12 +17,6 @@ import android.widget.Toast;
 
 import com.firebase.geofire.GeoFire;
 import com.firebase.geofire.GeoLocation;
-import com.firebase.geofire.GeoQuery;
-import com.firebase.geofire.GeoQueryEventListener;
-import com.google.android.gms.common.ConnectionResult;
-import com.google.android.gms.common.api.GoogleApiClient;
-import com.google.android.gms.location.LocationRequest;
-import com.google.android.gms.location.LocationServices;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -36,11 +25,8 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.util.HashMap;
 
 public class BlindMapActivity extends AppCompatActivity implements OnMapReadyCallback  {
 
@@ -128,6 +114,7 @@ public class BlindMapActivity extends AppCompatActivity implements OnMapReadyCal
                 if (mMap != null) {
 
                     LatLng latLng = new LatLng(lat, longitude);
+		    pickupLocation=latLng;
                     MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.position(latLng);
                     if (marker != null)
@@ -136,7 +123,6 @@ public class BlindMapActivity extends AppCompatActivity implements OnMapReadyCal
                         marker = mMap.addMarker(markerOptions);
                     mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 14));
                 }
-                Toast.makeText(BlindMapActivity.this, "Latitude is: " + lat + ", Longitude is " + longitude, Toast.LENGTH_LONG).show();
             }
         }
     }
