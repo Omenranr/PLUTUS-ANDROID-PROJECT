@@ -50,12 +50,13 @@ public class BlindMapActivity extends AppCompatActivity implements OnMapReadyCal
     private LocationBroadcastReceiver receiver;
     private Location mLastLocation;
     private LatLng pickupLocation;
-
+    private Button  mRequest;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blind_map);
+ 	mRequest = (Button) findViewById(R.id.request);
         receiver = new LocationBroadcastReceiver();
         if (Build.VERSION.SDK_INT >= 23) {
             if (checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
@@ -68,7 +69,19 @@ public class BlindMapActivity extends AppCompatActivity implements OnMapReadyCal
         }
         mapFragment = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.Blindmap);
         mapFragment.getMapAsync(this);
+	
+	 mRequest.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
+                DatabaseReference ref = FirebaseDatabase.getInstance().getReference("BlindRequest");
+                GeoFire geoFire = new GeoFire(ref);
+                geoFire.setLocation(userId, new GeoLocation(pickupLocation.latitude, pickupLocation.longitude));
+                mMap.addMarker(new MarkerOptions().position(pickupLocation).title("Pickup Here"));
+                mRequest.setText("Searching for Volunteer....");
+            }
+        });
        
     }
 
@@ -115,7 +128,6 @@ public class BlindMapActivity extends AppCompatActivity implements OnMapReadyCal
                 if (mMap != null) {
 
                     LatLng latLng = new LatLng(lat, longitude);
-                    pickupLocation=latLng;
                     MarkerOptions markerOptions = new MarkerOptions();
                     markerOptions.position(latLng);
                     if (marker != null)
