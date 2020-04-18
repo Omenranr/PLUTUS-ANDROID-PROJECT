@@ -12,5 +12,6 @@
 /captures
 .externalNativeBuild
 .cxx
+/.idea/vcs.xml
 /.idea
 
