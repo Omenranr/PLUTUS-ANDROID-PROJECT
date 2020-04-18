@@ -1,11 +1,81 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <!-- ripple effect color. -->
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorOnPrimary">@color/blue</item>
+        <item name="colorOnSecondary">@color/blue</item>
+        <item name="colorSurface">#FFFBFA</item>
+        <item name="colorOnSurface">@color/blue</item>
+        <item name="colorError">@color/red</item>
+        <item name="colorAccent">@color/fui_transparent</item>
+        <item name="colorOnError">#FFFBFA</item>
+        <item name="colorControlActivated">@color/blue</item>
+        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="textAppearanceButton">@style/plutu.button.text.style</item>
+</style>
+
+<style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <item name="cornerFamily">rounded</item>
+    <item name="cornerSize">10dp</item>
+</style>
+
+
+<!-- You still need the individual text field styles below to change non-theme attributes -->
+
+    <!-- FilledBox style-->
+    <style name="Widget.App.TextInputLayout.FilledBox" parent="Widget.MaterialComponents.TextInputLayout.FilledBox">
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearanceOverlay.App.TextInputLayout.FilledBox</item>
+        <item name="hintTextColor">@null</item>
+        <item name="android:textColorHint">@null</item>
+        <item name="hintTextAppearance">@style/TextAppearance.App.HintText</item>
+        <item name="boxBackgroundColor">@null</item>
+    </style>
+
+    <!-- Outlined style style-->
+    <style name="Widget.App.TextInputLayout.OutlinedBox" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearance">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="hintTextColor">@null</item>
+        <item name="android:textColorHint">@null</item>
+        <item name="hintTextAppearance">@style/TextAppearance.App.HintText</item>
+    </style>
+
+    <!-- hint style-->
+    <style name="TextAppearance.App.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="ShapeAppearanceOverlay.App.TextInputLayout.FilledBox" parent="ShapeAppearance.App.SmallComponent">
+        <item name="cornerSizeBottomLeft" tools:ignore="PrivateResource">@dimen/mtrl_textinput_box_corner_radius_small</item>
+        <item name="cornerSizeBottomRight" tools:ignore="PrivateResource">@dimen/mtrl_textinput_box_corner_radius_small</item>
+    </style>
+
+    <!-- Button text style-->
+    <style name="plutu.button.text.style" parent="TextAppearance.MaterialComponents.Button">
+        <item name="fontFamily">@font/mboto</item>
+        <item name="android:fontFamily">@font/mboto</item>
+    </style>
+
+    <!--Dense Button style-->
+    <style name="plutus.button.style" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">@color/blue</item>
+        <item name="rippleColor">@color/grey2</item>
+        <item name="cornerRadius">15dp</item>
+    </style>
+
+    <!--Hauler style-->
+    <style name="hauler.act.style" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/trans_black</item>
     </style>
 
 </resources>

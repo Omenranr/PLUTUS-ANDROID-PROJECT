@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2"
+    tools:context="SliderActivity">
+
+    <TextView
+        android:id="@+id/btnSkipe"
+        android:layout_width="60dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="290dp"
+        android:layout_marginTop="30dp"
+        android:text="Skip"
+        android:textSize="17sp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:clickable="true"
+        android:fontFamily="@font/mboto"
+        android:gravity="center"
+        android:textColor="@color/blue"
+        />
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:layout_marginTop="90dp"
+        ></androidx.viewpager.widget.ViewPager>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="600dp"
+        android:background="@color/white"
+        android:orientation="vertical"
+        >
+
+        <com.tbuonomo.viewpagerdotsindicator.WormDotsIndicator
+            android:id="@+id/wormDotsIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="130dp"
+            android:layout_marginTop="25dp"
+            app:dotsColor="@color/blue"
+            app:dotsStrokeColor="@color/blue"
+            app:dotsCornerRadius="8dp"
+            app:dotsSize="10dp"
+            app:dotsSpacing="4dp"
+            app:dotsStrokeWidth="2dp"
+            />
+
+        <Button
+            android:id="@+id/btnStart"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginRight="11dp"
+            android:text="Submit"
+            style="@style/plutus.button.style"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/blue"
+            android:textSize="14sp"
+            app:icon="@drawable/user_login_pic"
+            app:iconSize="22dp"
+            app:iconTint = "@color/white"
+            app:iconGravity="textStart"
+            android:visibility="invisible"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>

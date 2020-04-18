@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    tools:context="SplashActivity"
+    android:fitsSystemWindows="true"
+    >
+
+
+    <ImageView
+        android:id="@+id/sp1img1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginTop="250dp"
+        android:src="@drawable/logo_white"
+         />
+
+    <TextView
+        android:id="@+id/sp1txt2"
+
+        android:layout_width="275dp"
+        android:layout_height="44dp"
+
+        android:layout_marginStart="90dp"
+        android:layout_marginEnd="90dp"
+
+        android:layout_marginTop="360dp"
+        android:layout_marginBottom="150dp"
+
+        android:fontFamily="@font/rboto"
+        android:text="P  L  U  T  U  S"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+       />
+
+    <com.airbnb.lottie.LottieAnimationView
+
+        android:layout_width="299dp"
+        android:layout_height="152dp"
+
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+
+        android:layout_marginTop="330dp"
+        android:layout_marginBottom="225dp"
+
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/whitedots"
+        app:lottie_speed="2" />
+
+
+</RelativeLayout>
