@@ -19,10 +19,10 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.app.NotificationCompat;
 import android.util.Log;
 
-import com.rdmn.maps2018.R;
-import com.rdmn.maps2018.UserClient;
-import com.rdmn.maps2018.models.User;
-import com.rdmn.maps2018.models.UserLocation;
+import com.exemple.AndroidProject.R;
+import com.exemple.AndroidProject.UserClient;
+import com.exemple.AndroidProject.models.User;
+import com.exemple.AndroidProject.models.UserLocation;
 import com.google.android.gms.location.FusedLocationProviderClient;
 import com.google.android.gms.location.LocationCallback;
 import com.google.android.gms.location.LocationRequest;
