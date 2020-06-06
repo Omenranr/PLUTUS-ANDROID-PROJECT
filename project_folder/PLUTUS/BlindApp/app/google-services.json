@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "572230171185",
+    "firebase_url": "https://plutus-final.firebaseio.com",
+    "project_id": "plutus-final",
+    "storage_bucket": "plutus-final.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572230171185:android:79f7ddd264d03f77033310",
+        "android_client_info": {
+          "package_name": "com.rdmn.plutus.blindapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572230171185-i2aps1j02mmtlon4g136dqo9hm2tidr5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rdmn.plutus.blindapp",
+            "certificate_hash": "cd4b27ddddc33491b4ea557787eba3f8edb3fdf0"
+          }
+        },
+        {
+          "client_id": "572230171185-7u7jlalm70hn90m7kg07tsgn9dphlu08.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVm4k50-aj_ln2EmwxpUKnlnxM3LPNaIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572230171185-7u7jlalm70hn90m7kg07tsgn9dphlu08.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

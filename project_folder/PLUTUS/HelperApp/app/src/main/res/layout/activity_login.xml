@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.Login"
+    android:id="@+id/root"
+    android:background="@mipmap/bg_login">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="H E L P E R"
+            android:textColor="@color/white"
+            android:fontFamily="@font/mboto"
+            android:textSize="60sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="P L U T U S"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:textSize="30sp" />
+
+        <!--com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_phone"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.045"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_rawRes="@raw/animation_hello" /-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="90dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/btnSignin"
+            style="@style/button.style"
+            android:layout_width="290dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/mboto"
+            android:text="SIGN UP"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            style="@style/button.style"
+            android:layout_width="290dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="30dp"
+            android:backgroundTint="@color/white"
+            android:fontFamily="@font/mboto"
+            android:text="LOG IN"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:iconGravity="textStart"
+            app:iconSize="22dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:fontFamily="@font/mboto"
+            android:text="OR"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/facebookLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:fb_defaultColor="#39579B"
+            app:fb_focusColor="#000"
+            app:fb_fontIconResource="&#xf082;"
+            app:fb_fontIconSize="20sp"
+            app:fb_iconPaddingRight="10dp"
+            app:fb_iconPosition="left"
+            app:fb_radius="10dp"
+            app:fb_text="Facebook Connect"
+            app:fb_textColor="#ffffff"
+            app:fb_textSize="20sp" />
+
+        <mehdi.sakout.fancybuttons.FancyButton
+            android:id="@+id/login_button_Google"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="4dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:fb_defaultColor="#DD4B39"
+            app:fb_focusColor="#000"
+            app:fb_fontIconResource="&#xf1a0;"
+            app:fb_fontIconSize="20sp"
+            app:fb_iconPaddingRight="10dp"
+            app:fb_iconPosition="left"
+            app:fb_radius="10dp"
+            app:fb_text="Google"
+            app:fb_textColor="#ffffff"
+            app:fb_textSize="20sp" />
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
